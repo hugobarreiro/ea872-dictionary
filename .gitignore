@@ -1,0 +1,13 @@
+# ignore object files
+build
+
+# ignore executable
+bin/*
+
+# ignore logging files
+log/*
+
+# lex and yacc generated files
+lex.yy.c
+parserYacc.tab.h
+parserYacc.tab.c

@@ -1,0 +1,12 @@
+#ifndef SERVER
+#define SERVER
+
+int initServer(unsigned int port);
+void finishServer(int sock);
+
+int recieveMessage(int sock);
+char* readMessage(int msg);
+void writeMessage(int msg, char* response);
+void closeMessage(int msg);
+
+#endif

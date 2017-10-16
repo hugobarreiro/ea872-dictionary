@@ -1,0 +1,50 @@
+#include "server.h"
+
+#include <arpa/inet.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+
+int initServer(unsigned int port){
+    int sock;
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    perror("error socket");
+    struct sockaddr_in server;
+    server.sin_family = AF_INET;
+    server.sin_port = htons(port);
+    server.sin_addr.s_addr = INADDR_ANY;
+    bind(sock, (struct sockaddr*)&server, sizeof(server));
+    perror("error bind");
+    listen(sock, 5);
+    perror("error listen");
+    return sock;
+}
+
+void finishServer(int sock){
+    close(sock);
+}
+
+int recieveMessage(int sock){
+    int msg;
+    struct sockaddr_in client;
+    int addrSize = sizeof(client);
+    msg = accept(sock, (struct sockaddr*)&client, &addrSize);
+    perror("error accept");
+    return msg;
+}
+
+char* readMessage(int msg){
+    char buffer[1024];
+    read(msg, buffer, 1024);
+    return strdup(buffer);
+}
+
+void writeMessage(int msg, char* response){
+    write(msg, response, strlen(response)+1);
+}
+
+void closeMessage(int msg){
+    close(msg);
+}
