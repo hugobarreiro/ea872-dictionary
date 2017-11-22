@@ -36,7 +36,7 @@ void freeResponse(Response* response){
 }
 
 char* printResponse(Response* response){
-    char buffer[1000];
+    char buffer[10000];
     buffer[0]='\0';
     if(response){
         sprintf(buffer, "%s %u %s\r\n", response->httpVersion, response->httpCode, response->codeText);

@@ -1,0 +1,61 @@
+.TH "src/request.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/request.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'request\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Request * \fBcreateRequest\fP (char *type, char *resource, char *httpVersion)"
+.br
+.ti -1c
+.RI "Request * \fBaddHeaders2Request\fP (Request *request, Header *headersList)"
+.br
+.ti -1c
+.RI "void \fBfreeRequest\fP (Request *request)"
+.br
+.ti -1c
+.RI "char * \fBgetRequestType\fP (Request *request)"
+.br
+.ti -1c
+.RI "char * \fBprintRequest\fP (Request *request)"
+.br
+.ti -1c
+.RI "char * \fBfindConnection\fP (Request *request)"
+.br
+.ti -1c
+.RI "Request * \fBaddPayload2Request\fP (Request *request, char *payload)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "Request* addHeaders2Request (Request * request, Header * headersList)"
+
+.SS "Request* addPayload2Request (Request * request, char * payload)"
+
+.SS "Request* createRequest (char * type, char * resource, char * httpVersion)"
+
+.SS "char* findConnection (Request * request)"
+
+.SS "void freeRequest (Request * request)"
+
+.SS "char* getRequestType (Request * request)"
+
+.SS "char* printRequest (Request * request)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

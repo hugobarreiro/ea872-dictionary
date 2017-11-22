@@ -16,6 +16,7 @@ Request* createRequest(char* type, char* resource, char *httpVersion){
     request->resource = strdup(resource);
     request->httpVersion = strdup(httpVersion);
     request->headers = createHeadersList();
+    request->payload = "\0";
     return request;
 }
 
@@ -63,6 +64,8 @@ char* printRequest(Request* request){
     free(type);
     strcat(buffer, printHeader(request->headers->next));
     strcat(buffer, "\r\n");
+    strcat(buffer, request->payload);
+    strcat(buffer, "\r\n");
     return strdup(buffer);
 }
 
@@ -71,4 +74,9 @@ char* findConnection(Request *request){
         if(!strcmp(header->head,"Connection"))
             return header->values->next->val;
     return strdup("");
+}
+
+Request* addPayload2Request(Request* request, char* payload){
+    request->payload = strdup(payload);
+    return request;
 }

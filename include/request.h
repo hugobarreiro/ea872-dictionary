@@ -10,6 +10,7 @@ typedef struct request{
     char *resource;
     char *httpVersion;
     Header *headers;
+    char *payload;
 } Request;
 
 Request* createRequest(char* type, char* resource, char *httpVersion);
@@ -18,5 +19,6 @@ char* findConnection(Request* request);
 void freeRequest(Request* request);
 char* printRequest(Request* request);
 char* getRequestType(Request* request);
+Request* addPayload2Request(Request* request, char* payload);
 
 #endif

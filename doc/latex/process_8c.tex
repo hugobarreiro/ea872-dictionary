@@ -1,0 +1,89 @@
+\hypertarget{process_8c}{}\section{src/process.c File Reference}
+\label{process_8c}\index{src/process.\+c@{src/process.\+c}}
+{\ttfamily \#include \char`\"{}process.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for process.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Header $\ast$ \hyperlink{process_8c_a004e1a36053ffd770c66e34297728816}{response\+Header} (Request $\ast$request, char $\ast$last\+Modified, unsigned int length)
+\item 
+Response $\ast$ \hyperlink{process_8c_a8cfd2cf21003b3ba8b9bc7edf05b4c03}{response\+Error} (Request $\ast$request, unsigned int error\+Code)
+\item 
+Response $\ast$ \hyperlink{process_8c_a5169c8a7e61172d2b7797bcfd2608db7}{trace\+Request} (Request $\ast$request)
+\item 
+Response $\ast$ \hyperlink{process_8c_ae500b9d3155b509a6f1cefa92667e23c}{options\+Request} (Request $\ast$request)
+\item 
+Response $\ast$ \hyperlink{process_8c_ace08b1fdc27b225c3339b860b5c4455d}{get\+Request} (char $\ast$path, Request $\ast$request, struct stat resource\+Stat)
+\item 
+Response $\ast$ \hyperlink{process_8c_a4ac3c665cd8c6ac002a1fba3dccf7a38}{head\+Request} (char $\ast$path, Request $\ast$request, struct stat resource\+Stat)
+\item 
+Response $\ast$ \hyperlink{process_8c_a5e1fd05df6e9e3460f1f9586d3600121}{process\+Request} (Request $\ast$request)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{process_8c_a67a19941e47463030e812cb29f133b51}{base\+Path} \mbox{[}$\,$\mbox{]} = \char`\"{}bin/data\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{process_8c_ace08b1fdc27b225c3339b860b5c4455d}\label{process_8c_ace08b1fdc27b225c3339b860b5c4455d}} 
+\index{process.\+c@{process.\+c}!get\+Request@{get\+Request}}
+\index{get\+Request@{get\+Request}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{get\+Request()}{getRequest()}}
+{\footnotesize\ttfamily Response$\ast$ get\+Request (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{Request $\ast$}]{request,  }\item[{struct stat}]{resource\+Stat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_a4ac3c665cd8c6ac002a1fba3dccf7a38}\label{process_8c_a4ac3c665cd8c6ac002a1fba3dccf7a38}} 
+\index{process.\+c@{process.\+c}!head\+Request@{head\+Request}}
+\index{head\+Request@{head\+Request}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{head\+Request()}{headRequest()}}
+{\footnotesize\ttfamily Response$\ast$ head\+Request (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{Request $\ast$}]{request,  }\item[{struct stat}]{resource\+Stat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_ae500b9d3155b509a6f1cefa92667e23c}\label{process_8c_ae500b9d3155b509a6f1cefa92667e23c}} 
+\index{process.\+c@{process.\+c}!options\+Request@{options\+Request}}
+\index{options\+Request@{options\+Request}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{options\+Request()}{optionsRequest()}}
+{\footnotesize\ttfamily Response$\ast$ options\+Request (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_a5e1fd05df6e9e3460f1f9586d3600121}\label{process_8c_a5e1fd05df6e9e3460f1f9586d3600121}} 
+\index{process.\+c@{process.\+c}!process\+Request@{process\+Request}}
+\index{process\+Request@{process\+Request}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{process\+Request()}{processRequest()}}
+{\footnotesize\ttfamily Response$\ast$ process\+Request (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_a8cfd2cf21003b3ba8b9bc7edf05b4c03}\label{process_8c_a8cfd2cf21003b3ba8b9bc7edf05b4c03}} 
+\index{process.\+c@{process.\+c}!response\+Error@{response\+Error}}
+\index{response\+Error@{response\+Error}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{response\+Error()}{responseError()}}
+{\footnotesize\ttfamily Response$\ast$ response\+Error (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request,  }\item[{unsigned int}]{error\+Code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_a004e1a36053ffd770c66e34297728816}\label{process_8c_a004e1a36053ffd770c66e34297728816}} 
+\index{process.\+c@{process.\+c}!response\+Header@{response\+Header}}
+\index{response\+Header@{response\+Header}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{response\+Header()}{responseHeader()}}
+{\footnotesize\ttfamily Header$\ast$ response\+Header (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request,  }\item[{char $\ast$}]{last\+Modified,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{process_8c_a5169c8a7e61172d2b7797bcfd2608db7}\label{process_8c_a5169c8a7e61172d2b7797bcfd2608db7}} 
+\index{process.\+c@{process.\+c}!trace\+Request@{trace\+Request}}
+\index{trace\+Request@{trace\+Request}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{trace\+Request()}{traceRequest()}}
+{\footnotesize\ttfamily Response$\ast$ trace\+Request (\begin{DoxyParamCaption}\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{process_8c_a67a19941e47463030e812cb29f133b51}\label{process_8c_a67a19941e47463030e812cb29f133b51}} 
+\index{process.\+c@{process.\+c}!base\+Path@{base\+Path}}
+\index{base\+Path@{base\+Path}!process.\+c@{process.\+c}}
+\subsubsection{\texorpdfstring{base\+Path}{basePath}}
+{\footnotesize\ttfamily char base\+Path\mbox{[}$\,$\mbox{]} = \char`\"{}bin/data\char`\"{}}
+

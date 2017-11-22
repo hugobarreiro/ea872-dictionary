@@ -1,0 +1,83 @@
+.TH "src/main.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+\fC#include 'request\&.h'\fP
+.br
+\fC#include 'response\&.h'\fP
+.br
+\fC#include 'process\&.h'\fP
+.br
+\fC#include 'parser\&.h'\fP
+.br
+\fC#include 'logger\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitServer\fP (unsigned int port)"
+.br
+.ti -1c
+.RI "void \fBfinishServer\fP (int param)"
+.br
+.ti -1c
+.RI "Request * \fBinternalServerErrorRequest\fP ()"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBsocketDesc\fP"
+.br
+.ti -1c
+.RI "Logger \fBlogger\fP"
+.br
+.ti -1c
+.RI "int \fByydebug\fP =1"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void finishServer (int param)"
+
+.SS "void initServer (unsigned int port)"
+
+.SS "Request* internalServerErrorRequest ()"
+
+.SS "int main (int argc, char ** argv)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "Logger logger"
+
+.SS "int socketDesc"
+
+.SS "int yydebug =1"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

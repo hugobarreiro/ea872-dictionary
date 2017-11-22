@@ -1,0 +1,61 @@
+\hypertarget{logger_8c}{}\section{src/logger.c File Reference}
+\label{logger_8c}\index{src/logger.\+c@{src/logger.\+c}}
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for logger.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Logger \hyperlink{logger_8c_a455dedcacca501026a7ff27425fffccb}{logger\+Init} ()
+\item 
+void \hyperlink{logger_8c_a4beda59d91759be01ed43de11eba6497}{log\+Message} (Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger}, char $\ast$message)
+\item 
+void \hyperlink{logger_8c_a1d2c8265e91b81dc49e043908a8d0d3d}{log\+Request} (Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger}, Request $\ast$request)
+\item 
+void \hyperlink{logger_8c_adcf80636e7fc8ee16c610cf78018591b}{log\+Response} (Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger}, Response $\ast$response)
+\item 
+void \hyperlink{logger_8c_a80db1cc41b130f3e506ef7a710b546df}{log\+Error} (Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger}, char $\ast$error)
+\item 
+void \hyperlink{logger_8c_a00c52c76be1f8e03b7f626dd3c761c50}{logger\+Close} (Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logger_8c_a80db1cc41b130f3e506ef7a710b546df}\label{logger_8c_a80db1cc41b130f3e506ef7a710b546df}} 
+\index{logger.\+c@{logger.\+c}!log\+Error@{log\+Error}}
+\index{log\+Error@{log\+Error}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{log\+Error()}{logError()}}
+{\footnotesize\ttfamily void log\+Error (\begin{DoxyParamCaption}\item[{Logger}]{logger,  }\item[{char $\ast$}]{error }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logger_8c_a00c52c76be1f8e03b7f626dd3c761c50}\label{logger_8c_a00c52c76be1f8e03b7f626dd3c761c50}} 
+\index{logger.\+c@{logger.\+c}!logger\+Close@{logger\+Close}}
+\index{logger\+Close@{logger\+Close}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{logger\+Close()}{loggerClose()}}
+{\footnotesize\ttfamily void logger\+Close (\begin{DoxyParamCaption}\item[{Logger}]{logger }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logger_8c_a455dedcacca501026a7ff27425fffccb}\label{logger_8c_a455dedcacca501026a7ff27425fffccb}} 
+\index{logger.\+c@{logger.\+c}!logger\+Init@{logger\+Init}}
+\index{logger\+Init@{logger\+Init}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{logger\+Init()}{loggerInit()}}
+{\footnotesize\ttfamily Logger logger\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logger_8c_a4beda59d91759be01ed43de11eba6497}\label{logger_8c_a4beda59d91759be01ed43de11eba6497}} 
+\index{logger.\+c@{logger.\+c}!log\+Message@{log\+Message}}
+\index{log\+Message@{log\+Message}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{log\+Message()}{logMessage()}}
+{\footnotesize\ttfamily void log\+Message (\begin{DoxyParamCaption}\item[{Logger}]{logger,  }\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logger_8c_a1d2c8265e91b81dc49e043908a8d0d3d}\label{logger_8c_a1d2c8265e91b81dc49e043908a8d0d3d}} 
+\index{logger.\+c@{logger.\+c}!log\+Request@{log\+Request}}
+\index{log\+Request@{log\+Request}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{log\+Request()}{logRequest()}}
+{\footnotesize\ttfamily void log\+Request (\begin{DoxyParamCaption}\item[{Logger}]{logger,  }\item[{Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{logger_8c_adcf80636e7fc8ee16c610cf78018591b}\label{logger_8c_adcf80636e7fc8ee16c610cf78018591b}} 
+\index{logger.\+c@{logger.\+c}!log\+Response@{log\+Response}}
+\index{log\+Response@{log\+Response}!logger.\+c@{logger.\+c}}
+\subsubsection{\texorpdfstring{log\+Response()}{logResponse()}}
+{\footnotesize\ttfamily void log\+Response (\begin{DoxyParamCaption}\item[{Logger}]{logger,  }\item[{Response $\ast$}]{response }\end{DoxyParamCaption})}
+

@@ -1,0 +1,81 @@
+.TH "src/header.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/header.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Header * \fBcreateHeadersList\fP ()"
+.br
+.ti -1c
+.RI "Value * \fBcreateValuesList\fP ()"
+.br
+.ti -1c
+.RI "Header * \fBcreateHeader\fP (char *header)"
+.br
+.ti -1c
+.RI "Value * \fBcreateValue\fP (char *value)"
+.br
+.ti -1c
+.RI "Value * \fBaddValue\fP (Value *valuesList, Value *value)"
+.br
+.ti -1c
+.RI "Header * \fBaddHeader\fP (Header *headersList, Header *header)"
+.br
+.ti -1c
+.RI "Header * \fBaddValues2Header\fP (Header *header, Value *valuesList)"
+.br
+.ti -1c
+.RI "void \fBfreeHeaders\fP (Header *headersList)"
+.br
+.ti -1c
+.RI "void \fBfreeValues\fP (Value *valuesList)"
+.br
+.ti -1c
+.RI "char * \fBprintHeader\fP (Header *header)"
+.br
+.ti -1c
+.RI "char * \fBprintValue\fP (Value *value)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "Header* addHeader (Header * headersList, Header * header)"
+
+.SS "Value* addValue (Value * valuesList, Value * value)"
+
+.SS "Header* addValues2Header (Header * header, Value * valuesList)"
+
+.SS "Header* createHeader (char * header)"
+
+.SS "Header* createHeadersList ()"
+
+.SS "Value* createValue (char * value)"
+
+.SS "Value* createValuesList ()"
+
+.SS "void freeHeaders (Header * headersList)"
+
+.SS "void freeValues (Value * valuesList)"
+
+.SS "char* printHeader (Header * header)"
+
+.SS "char* printValue (Value * value)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

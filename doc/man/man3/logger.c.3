@@ -1,0 +1,54 @@
+.TH "src/logger.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/logger.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'logger\&.h'\fP
+.br
+\fC#include 'utils\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Logger \fBloggerInit\fP ()"
+.br
+.ti -1c
+.RI "void \fBlogMessage\fP (Logger \fBlogger\fP, char *message)"
+.br
+.ti -1c
+.RI "void \fBlogRequest\fP (Logger \fBlogger\fP, Request *request)"
+.br
+.ti -1c
+.RI "void \fBlogResponse\fP (Logger \fBlogger\fP, Response *response)"
+.br
+.ti -1c
+.RI "void \fBlogError\fP (Logger \fBlogger\fP, char *error)"
+.br
+.ti -1c
+.RI "void \fBloggerClose\fP (Logger \fBlogger\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void logError (Logger logger, char * error)"
+
+.SS "void loggerClose (Logger logger)"
+
+.SS "Logger loggerInit ()"
+
+.SS "void logMessage (Logger logger, char * message)"
+
+.SS "void logRequest (Logger logger, Request * request)"
+
+.SS "void logResponse (Logger logger, Response * response)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

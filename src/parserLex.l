@@ -1,11 +1,14 @@
-%option noyywrap
-
 %{
     #include "request.h"
     #include "parserYacc.tab.h"
+
+    int yywrap(void){
+        BEGIN 0;
+        return 1;
+    }
 %}
 
-%x REQ RES VERSION HEADER VAL
+%x REQ RES VERSION HEADER VAL PAYLOAD
 
 func        ^(GET|HEAD|OPTIONS|POST|PUT|DELETE|TRACE)
 resource    "/"[^ \r]*
@@ -60,7 +63,7 @@ value       [^,\r]*
                 }
 
 <HEADER>\r\n  {
-              BEGIN INITIAL;
+              BEGIN PAYLOAD;
               return REQEND;
               }
 
@@ -68,4 +71,9 @@ value       [^,\r]*
                 yylval.str = strdup(yytext);
                 BEGIN REQ;
                 return VALUE;
+                }
+
+<PAYLOAD>.*        {
+                yylval.str = strdup(yytext);
+                return BODY;
                 }

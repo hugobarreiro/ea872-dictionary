@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -10,11 +11,12 @@
 #include "process.h"
 #include "parser.h"
 #include "logger.h"
+#include "dictionary.h"
 
 int socketDesc;
-Logger logger;
-
+int yydebug=0;
 void initServer(unsigned int port){
+      initDictionary();
       socketDesc = socket(AF_INET, SOCK_STREAM, 0);
       struct sockaddr_in server;
       server.sin_family = AF_INET;
@@ -24,13 +26,11 @@ void initServer(unsigned int port){
       listen(socketDesc, 5);
       char message[32];
       sprintf(message, "Server opened at port %u", port);
-      logMessage(logger, message);
 }
 
 void finishServer(int param){
+    endDictionary();
     close(socketDesc);
-    logMessage(logger, "Server closed");
-    loggerClose(logger);
     exit(0);
 }
 
@@ -49,7 +49,6 @@ Request* internalServerErrorRequest(){
 
 int main(int argc, char** argv)
 {
-    logger = loggerInit();
     initServer(5555);
     signal(SIGINT, finishServer);
 
@@ -61,13 +60,14 @@ int main(int argc, char** argv)
 
         char request_message[1024];
         read(message, request_message, 1024);
+        fprintf(stderr, "%s", request_message);
 
         Request* request = parseRequest(request_message);
-        logRequest(logger, request);
+        fprintf(stderr, "%s\n", printRequest(request));
         Response* response = processRequest(request);
-        logResponse(logger, response);
 
         char* responseString = printResponse(response);
+        fprintf(stderr, "%s\n", responseString);
         write(message, responseString, strlen(responseString+1));
         free(responseString);
         close(message);

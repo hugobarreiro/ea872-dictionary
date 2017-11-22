@@ -1,0 +1,84 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}request.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}response.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}process.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a62ffea9ea862aea5c93e249c68535125}{init\+Server} (unsigned int port)
+\item 
+void \hyperlink{main_8c_ab7c603027273cfcc1412df6b84da0a0f}{finish\+Server} (int param)
+\item 
+Request $\ast$ \hyperlink{main_8c_a2f8713b174b91bf5810a1bac98f6d7b4}{internal\+Server\+Error\+Request} ()
+\item 
+int \hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_ae5202963330b8989b5fce96e0992d7b5}{socket\+Desc}
+\item 
+Logger \hyperlink{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}{logger}
+\item 
+int \hyperlink{main_8c_ab138aa8e11f58bcdcc7134adf240ea8c}{yydebug} =1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ab7c603027273cfcc1412df6b84da0a0f}\label{main_8c_ab7c603027273cfcc1412df6b84da0a0f}} 
+\index{main.\+c@{main.\+c}!finish\+Server@{finish\+Server}}
+\index{finish\+Server@{finish\+Server}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{finish\+Server()}{finishServer()}}
+{\footnotesize\ttfamily void finish\+Server (\begin{DoxyParamCaption}\item[{int}]{param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a62ffea9ea862aea5c93e249c68535125}\label{main_8c_a62ffea9ea862aea5c93e249c68535125}} 
+\index{main.\+c@{main.\+c}!init\+Server@{init\+Server}}
+\index{init\+Server@{init\+Server}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{init\+Server()}{initServer()}}
+{\footnotesize\ttfamily void init\+Server (\begin{DoxyParamCaption}\item[{unsigned int}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a2f8713b174b91bf5810a1bac98f6d7b4}\label{main_8c_a2f8713b174b91bf5810a1bac98f6d7b4}} 
+\index{main.\+c@{main.\+c}!internal\+Server\+Error\+Request@{internal\+Server\+Error\+Request}}
+\index{internal\+Server\+Error\+Request@{internal\+Server\+Error\+Request}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{internal\+Server\+Error\+Request()}{internalServerErrorRequest()}}
+{\footnotesize\ttfamily Request$\ast$ internal\+Server\+Error\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}\label{main_8c_a5b27630dbcf231bfda3a7d79e1eefce5}} 
+\index{main.\+c@{main.\+c}!logger@{logger}}
+\index{logger@{logger}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily Logger logger}
+
+\mbox{\Hypertarget{main_8c_ae5202963330b8989b5fce96e0992d7b5}\label{main_8c_ae5202963330b8989b5fce96e0992d7b5}} 
+\index{main.\+c@{main.\+c}!socket\+Desc@{socket\+Desc}}
+\index{socket\+Desc@{socket\+Desc}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{socket\+Desc}{socketDesc}}
+{\footnotesize\ttfamily int socket\+Desc}
+
+\mbox{\Hypertarget{main_8c_ab138aa8e11f58bcdcc7134adf240ea8c}\label{main_8c_ab138aa8e11f58bcdcc7134adf240ea8c}} 
+\index{main.\+c@{main.\+c}!yydebug@{yydebug}}
+\index{yydebug@{yydebug}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{yydebug}{yydebug}}
+{\footnotesize\ttfamily int yydebug =1}
+

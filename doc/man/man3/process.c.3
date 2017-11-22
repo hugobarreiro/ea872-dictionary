@@ -1,0 +1,82 @@
+.TH "src/process.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/process.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'process\&.h'\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'utils\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Header * \fBresponseHeader\fP (Request *request, char *lastModified, unsigned int length)"
+.br
+.ti -1c
+.RI "Response * \fBresponseError\fP (Request *request, unsigned int errorCode)"
+.br
+.ti -1c
+.RI "Response * \fBtraceRequest\fP (Request *request)"
+.br
+.ti -1c
+.RI "Response * \fBoptionsRequest\fP (Request *request)"
+.br
+.ti -1c
+.RI "Response * \fBgetRequest\fP (char *path, Request *request, struct stat resourceStat)"
+.br
+.ti -1c
+.RI "Response * \fBheadRequest\fP (char *path, Request *request, struct stat resourceStat)"
+.br
+.ti -1c
+.RI "Response * \fBprocessRequest\fP (Request *request)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char \fBbasePath\fP [] = 'bin/data'"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "Response* getRequest (char * path, Request * request, struct stat resourceStat)"
+
+.SS "Response* headRequest (char * path, Request * request, struct stat resourceStat)"
+
+.SS "Response* optionsRequest (Request * request)"
+
+.SS "Response* processRequest (Request * request)"
+
+.SS "Response* responseError (Request * request, unsigned int errorCode)"
+
+.SS "Header* responseHeader (Request * request, char * lastModified, unsigned int length)"
+
+.SS "Response* traceRequest (Request * request)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "char basePath[] = 'bin/data'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

@@ -1,0 +1,56 @@
+.TH "src/response.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/response.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'response\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Response * \fBcreateResponse\fP (char *httpVersion, unsigned int httpCode, char *codeText)"
+.br
+.ti -1c
+.RI "Response * \fBaddHeaders2Response\fP (Response *response, Header *headersList)"
+.br
+.ti -1c
+.RI "Response * \fBaddPayload2Response\fP (Response *response, char *payload)"
+.br
+.ti -1c
+.RI "void \fBfreeResponse\fP (Response *response)"
+.br
+.ti -1c
+.RI "char * \fBprintResponse\fP (Response *response)"
+.br
+.ti -1c
+.RI "char * \fBgetContentLength\fP (Response *response)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "Response* addHeaders2Response (Response * response, Header * headersList)"
+
+.SS "Response* addPayload2Response (Response * response, char * payload)"
+
+.SS "Response* createResponse (char * httpVersion, unsigned int httpCode, char * codeText)"
+
+.SS "void freeResponse (Response * response)"
+
+.SS "char* getContentLength (Response * response)"
+
+.SS "char* printResponse (Response * response)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

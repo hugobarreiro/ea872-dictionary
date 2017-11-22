@@ -1,0 +1,102 @@
+\hypertarget{header_8c}{}\section{src/header.c File Reference}
+\label{header_8c}\index{src/header.\+c@{src/header.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for header.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Header $\ast$ \hyperlink{header_8c_a80452992eac619ec2ed6a661233d074e}{create\+Headers\+List} ()
+\item 
+Value $\ast$ \hyperlink{header_8c_ada539894a493043e7c6553896eff454a}{create\+Values\+List} ()
+\item 
+Header $\ast$ \hyperlink{header_8c_ac5beda350ba3972ad0a38ed691c0e7f4}{create\+Header} (char $\ast$header)
+\item 
+Value $\ast$ \hyperlink{header_8c_a4dd77ec4a19138e6531ab0281b9195a2}{create\+Value} (char $\ast$value)
+\item 
+Value $\ast$ \hyperlink{header_8c_a85ab0e38b05ef8780b6a4154acb69af0}{add\+Value} (Value $\ast$values\+List, Value $\ast$value)
+\item 
+Header $\ast$ \hyperlink{header_8c_acb2afb96be1c1b7a14691e4b43d35d52}{add\+Header} (Header $\ast$headers\+List, Header $\ast$header)
+\item 
+Header $\ast$ \hyperlink{header_8c_a38560da3ab8c767a204b95b356f007a5}{add\+Values2\+Header} (Header $\ast$header, Value $\ast$values\+List)
+\item 
+void \hyperlink{header_8c_af4132d7fd1b32ac603ef48f57a02af20}{free\+Headers} (Header $\ast$headers\+List)
+\item 
+void \hyperlink{header_8c_aa5d768be3c2cd855075ac7fa755b8d0a}{free\+Values} (Value $\ast$values\+List)
+\item 
+char $\ast$ \hyperlink{header_8c_a07d806ed600e651cc278395ebb70c22a}{print\+Header} (Header $\ast$header)
+\item 
+char $\ast$ \hyperlink{header_8c_a5ede042ebd390696bec5ba8b40596f87}{print\+Value} (Value $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{header_8c_acb2afb96be1c1b7a14691e4b43d35d52}\label{header_8c_acb2afb96be1c1b7a14691e4b43d35d52}} 
+\index{header.\+c@{header.\+c}!add\+Header@{add\+Header}}
+\index{add\+Header@{add\+Header}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{add\+Header()}{addHeader()}}
+{\footnotesize\ttfamily Header$\ast$ add\+Header (\begin{DoxyParamCaption}\item[{Header $\ast$}]{headers\+List,  }\item[{Header $\ast$}]{header }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a85ab0e38b05ef8780b6a4154acb69af0}\label{header_8c_a85ab0e38b05ef8780b6a4154acb69af0}} 
+\index{header.\+c@{header.\+c}!add\+Value@{add\+Value}}
+\index{add\+Value@{add\+Value}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{add\+Value()}{addValue()}}
+{\footnotesize\ttfamily Value$\ast$ add\+Value (\begin{DoxyParamCaption}\item[{Value $\ast$}]{values\+List,  }\item[{Value $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a38560da3ab8c767a204b95b356f007a5}\label{header_8c_a38560da3ab8c767a204b95b356f007a5}} 
+\index{header.\+c@{header.\+c}!add\+Values2\+Header@{add\+Values2\+Header}}
+\index{add\+Values2\+Header@{add\+Values2\+Header}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{add\+Values2\+Header()}{addValues2Header()}}
+{\footnotesize\ttfamily Header$\ast$ add\+Values2\+Header (\begin{DoxyParamCaption}\item[{Header $\ast$}]{header,  }\item[{Value $\ast$}]{values\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_ac5beda350ba3972ad0a38ed691c0e7f4}\label{header_8c_ac5beda350ba3972ad0a38ed691c0e7f4}} 
+\index{header.\+c@{header.\+c}!create\+Header@{create\+Header}}
+\index{create\+Header@{create\+Header}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{create\+Header()}{createHeader()}}
+{\footnotesize\ttfamily Header$\ast$ create\+Header (\begin{DoxyParamCaption}\item[{char $\ast$}]{header }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a80452992eac619ec2ed6a661233d074e}\label{header_8c_a80452992eac619ec2ed6a661233d074e}} 
+\index{header.\+c@{header.\+c}!create\+Headers\+List@{create\+Headers\+List}}
+\index{create\+Headers\+List@{create\+Headers\+List}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{create\+Headers\+List()}{createHeadersList()}}
+{\footnotesize\ttfamily Header$\ast$ create\+Headers\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a4dd77ec4a19138e6531ab0281b9195a2}\label{header_8c_a4dd77ec4a19138e6531ab0281b9195a2}} 
+\index{header.\+c@{header.\+c}!create\+Value@{create\+Value}}
+\index{create\+Value@{create\+Value}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{create\+Value()}{createValue()}}
+{\footnotesize\ttfamily Value$\ast$ create\+Value (\begin{DoxyParamCaption}\item[{char $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_ada539894a493043e7c6553896eff454a}\label{header_8c_ada539894a493043e7c6553896eff454a}} 
+\index{header.\+c@{header.\+c}!create\+Values\+List@{create\+Values\+List}}
+\index{create\+Values\+List@{create\+Values\+List}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{create\+Values\+List()}{createValuesList()}}
+{\footnotesize\ttfamily Value$\ast$ create\+Values\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_af4132d7fd1b32ac603ef48f57a02af20}\label{header_8c_af4132d7fd1b32ac603ef48f57a02af20}} 
+\index{header.\+c@{header.\+c}!free\+Headers@{free\+Headers}}
+\index{free\+Headers@{free\+Headers}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{free\+Headers()}{freeHeaders()}}
+{\footnotesize\ttfamily void free\+Headers (\begin{DoxyParamCaption}\item[{Header $\ast$}]{headers\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_aa5d768be3c2cd855075ac7fa755b8d0a}\label{header_8c_aa5d768be3c2cd855075ac7fa755b8d0a}} 
+\index{header.\+c@{header.\+c}!free\+Values@{free\+Values}}
+\index{free\+Values@{free\+Values}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{free\+Values()}{freeValues()}}
+{\footnotesize\ttfamily void free\+Values (\begin{DoxyParamCaption}\item[{Value $\ast$}]{values\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a07d806ed600e651cc278395ebb70c22a}\label{header_8c_a07d806ed600e651cc278395ebb70c22a}} 
+\index{header.\+c@{header.\+c}!print\+Header@{print\+Header}}
+\index{print\+Header@{print\+Header}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{print\+Header()}{printHeader()}}
+{\footnotesize\ttfamily char$\ast$ print\+Header (\begin{DoxyParamCaption}\item[{Header $\ast$}]{header }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8c_a5ede042ebd390696bec5ba8b40596f87}\label{header_8c_a5ede042ebd390696bec5ba8b40596f87}} 
+\index{header.\+c@{header.\+c}!print\+Value@{print\+Value}}
+\index{print\+Value@{print\+Value}!header.\+c@{header.\+c}}
+\subsubsection{\texorpdfstring{print\+Value()}{printValue()}}
+{\footnotesize\ttfamily char$\ast$ print\+Value (\begin{DoxyParamCaption}\item[{Value $\ast$}]{value }\end{DoxyParamCaption})}
+

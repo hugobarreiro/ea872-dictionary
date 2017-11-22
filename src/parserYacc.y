@@ -8,7 +8,7 @@
 
     void yyerror(const char* str) {
         fprintf(stderr, "Parse error: %s\n", str);
-        raise(SIGINT);
+        //raise(SIGINT);
     }
     int yylex();
 
@@ -28,16 +28,20 @@
     Request* request;
 }
 
-%token COLON COMMA VALUE HEAD FUNCTION RESOURCE HTTP END REQEND
+%token COLON COMMA VALUE HEAD FUNCTION RESOURCE HTTP END REQEND BODY ENDOFFILE
 
 %%
 
 export : request                            {
                                             request = $<request>1;
                                             };
+request : requestLine headers REQEND BODY   {
+                                            $<request>$ = addHeaders2Request($<request>1, $<header>2);
+                                            $<request>$ = addPayload2Request($<request>$, $<str>4);
+                                            };
 request : requestLine headers REQEND        {
                                             $<request>$ = addHeaders2Request($<request>1, $<header>2);
-                                            };
+                                            }
 requestLine : FUNCTION RESOURCE HTTP END    {
                                             $<request>$ = createRequest($<str>1, $<str>2, $<str>3);
                                             free($<str>1);

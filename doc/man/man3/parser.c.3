@@ -1,0 +1,58 @@
+.TH "src/parser.c" 3 "Tue Oct 17 2017" "Version 0.2" "EA872 Dictionary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/parser.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'parser\&.h'\fP
+.br
+\fC#include 'parserYacc\&.tab\&.h'\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct yy_buffer_state * \fBYY_BUFFER_STATE\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fByyparse\fP ()"
+.br
+.ti -1c
+.RI "\fBYY_BUFFER_STATE\fP \fByy_scan_string\fP (char *str)"
+.br
+.ti -1c
+.RI "void \fByy_delete_buffer\fP (\fBYY_BUFFER_STATE\fP buffer)"
+.br
+.ti -1c
+.RI "Request * \fBpickRequest\fP ()"
+.br
+.ti -1c
+.RI "Request * \fBparseRequest\fP (char *message)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct yy_buffer_state* \fBYY_BUFFER_STATE\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "Request* parseRequest (char * message)"
+
+.SS "Request* pickRequest ()"
+
+.SS "void yy_delete_buffer (\fBYY_BUFFER_STATE\fP buffer)"
+
+.SS "\fBYY_BUFFER_STATE\fP yy_scan_string (char * str)"
+
+.SS "int yyparse ()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EA872 Dictionary from the source code\&.

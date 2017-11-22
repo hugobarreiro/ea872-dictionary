@@ -1,0 +1,62 @@
+\hypertarget{response_8c}{}\section{src/response.c File Reference}
+\label{response_8c}\index{src/response.\+c@{src/response.\+c}}
+{\ttfamily \#include \char`\"{}response.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for response.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Response $\ast$ \hyperlink{response_8c_a3b99a67df0db4f2457f07c03daf97d70}{create\+Response} (char $\ast$http\+Version, unsigned int http\+Code, char $\ast$code\+Text)
+\item 
+Response $\ast$ \hyperlink{response_8c_ad37d0d58722a466fb276ce04e7bf298c}{add\+Headers2\+Response} (Response $\ast$response, Header $\ast$headers\+List)
+\item 
+Response $\ast$ \hyperlink{response_8c_a2e7b8e16bc149f94e78e065b7d7c8e20}{add\+Payload2\+Response} (Response $\ast$response, char $\ast$payload)
+\item 
+void \hyperlink{response_8c_a4c1a5c8f22f61106ae15022c1b588cae}{free\+Response} (Response $\ast$response)
+\item 
+char $\ast$ \hyperlink{response_8c_ad230fde9f378abd5de9df187de0d7299}{print\+Response} (Response $\ast$response)
+\item 
+char $\ast$ \hyperlink{response_8c_a205c5103aa15d500ae55fc98ce7da19d}{get\+Content\+Length} (Response $\ast$response)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{response_8c_ad37d0d58722a466fb276ce04e7bf298c}\label{response_8c_ad37d0d58722a466fb276ce04e7bf298c}} 
+\index{response.\+c@{response.\+c}!add\+Headers2\+Response@{add\+Headers2\+Response}}
+\index{add\+Headers2\+Response@{add\+Headers2\+Response}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{add\+Headers2\+Response()}{addHeaders2Response()}}
+{\footnotesize\ttfamily Response$\ast$ add\+Headers2\+Response (\begin{DoxyParamCaption}\item[{Response $\ast$}]{response,  }\item[{Header $\ast$}]{headers\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{response_8c_a2e7b8e16bc149f94e78e065b7d7c8e20}\label{response_8c_a2e7b8e16bc149f94e78e065b7d7c8e20}} 
+\index{response.\+c@{response.\+c}!add\+Payload2\+Response@{add\+Payload2\+Response}}
+\index{add\+Payload2\+Response@{add\+Payload2\+Response}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{add\+Payload2\+Response()}{addPayload2Response()}}
+{\footnotesize\ttfamily Response$\ast$ add\+Payload2\+Response (\begin{DoxyParamCaption}\item[{Response $\ast$}]{response,  }\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{response_8c_a3b99a67df0db4f2457f07c03daf97d70}\label{response_8c_a3b99a67df0db4f2457f07c03daf97d70}} 
+\index{response.\+c@{response.\+c}!create\+Response@{create\+Response}}
+\index{create\+Response@{create\+Response}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{create\+Response()}{createResponse()}}
+{\footnotesize\ttfamily Response$\ast$ create\+Response (\begin{DoxyParamCaption}\item[{char $\ast$}]{http\+Version,  }\item[{unsigned int}]{http\+Code,  }\item[{char $\ast$}]{code\+Text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{response_8c_a4c1a5c8f22f61106ae15022c1b588cae}\label{response_8c_a4c1a5c8f22f61106ae15022c1b588cae}} 
+\index{response.\+c@{response.\+c}!free\+Response@{free\+Response}}
+\index{free\+Response@{free\+Response}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{free\+Response()}{freeResponse()}}
+{\footnotesize\ttfamily void free\+Response (\begin{DoxyParamCaption}\item[{Response $\ast$}]{response }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{response_8c_a205c5103aa15d500ae55fc98ce7da19d}\label{response_8c_a205c5103aa15d500ae55fc98ce7da19d}} 
+\index{response.\+c@{response.\+c}!get\+Content\+Length@{get\+Content\+Length}}
+\index{get\+Content\+Length@{get\+Content\+Length}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{get\+Content\+Length()}{getContentLength()}}
+{\footnotesize\ttfamily char$\ast$ get\+Content\+Length (\begin{DoxyParamCaption}\item[{Response $\ast$}]{response }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{response_8c_ad230fde9f378abd5de9df187de0d7299}\label{response_8c_ad230fde9f378abd5de9df187de0d7299}} 
+\index{response.\+c@{response.\+c}!print\+Response@{print\+Response}}
+\index{print\+Response@{print\+Response}!response.\+c@{response.\+c}}
+\subsubsection{\texorpdfstring{print\+Response()}{printResponse()}}
+{\footnotesize\ttfamily char$\ast$ print\+Response (\begin{DoxyParamCaption}\item[{Response $\ast$}]{response }\end{DoxyParamCaption})}
+

@@ -2,7 +2,7 @@
 # MAKEFILE
 
 CC := gcc
-CFLAGS := -g
+CFLAGS := -std=gnu11 -g -I/usr/local/include/libmongoc-1.0 -I/usr/local/include/libbson-1.0
 
 YACC := bison
 YFLAGS := -t
@@ -14,6 +14,8 @@ BUILD_FOLDER := build
 INCLUDE_FOLDER := include
 TARGET := bin/server
 INCLUDES := -I $(INCLUDE_FOLDER)
+LDFLAGS := -L/usr/local/lib
+LDLIBS := -lmongoc-1.0 -lrt -lbson-1.0
 
 SOURCES := $(shell find $(SRC_FOLDER) -type f -name *.c)
 LEX_SOURCES := $(shell find $(SRC_FOLDER) -type f -name *.l)
@@ -29,7 +31,7 @@ all: build
 	make clean
 
 build: $(OBJECTS)
-	gcc -o $(TARGET) $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LDLIBS)
 
 clean:
 	rm -rf $(BUILD_FOLDER)
@@ -71,5 +73,7 @@ $(INCLUDE_FOLDER)/parser.h: $(INCLUDE_FOLDER)/request.h
 $(INCLUDE_FOLDER)/process.h: $(INCLUDE_FOLDER)/request.h $(INCLUDE_FOLDER)/response.h
 $(INCLUDE_FOLDER)/request.h: $(INCLUDE_FOLDER)/header.h
 $(INCLUDE_FOLDER)/response.h: $(INCLUDE_FOLDER)/header.h
+$(INCLUDE_FOLDER)/entry.h:
+$(INCLUDE_FOLDER)/dictionary.h: $(INCLUDE_FOLDER)/entry.h
 
 .PHONY: all build clean run
